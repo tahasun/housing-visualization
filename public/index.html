@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Housing Visualization</title>
+
+    <script src="main.js"></script>
+
+    <script defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXTCbodle2uCB9nsnZS9Kq8SxHvO02Glk&callback=initMap">
+    </script>
+
+    <style>
+        body { margin: 0; }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #tooltip {
+            position: absolute; 
+            background: white;
+            margin: 10px; 
+            padding: 10px;
+        }
+
+        #legend {
+            display: block;
+            position: absolute; 
+            background: white;
+            padding: 2px 10px;
+            top: 90vh;
+            left: 2vw;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div id="tooltip"></div>
+
+    <div id="legend">
+        <div class="row">
+            <span style="margin-right: 10px"> 14k </span>
+            <svg width="220" height="24" id="color-range">
+                <rect fill="rgb(255,255,204)" width="24" height="24" x="0"></rect>
+                <rect fill="rgb(255,237,160)" width="24" height="24" x="24"></rect>
+                <rect fill="rgb(254,217,118)" width="24" height="24" x="48"></rect>
+                <rect fill="rgb(254,178,76)" width="24" height="24" x="72"></rect>
+                <rect fill="rgb(253,141,60)" width="24" height="24" x="96"></rect>
+                <rect fill="rgb(252,78,42)" width="24" height="24" x="120"></rect>
+                <rect fill="rgb(227,26,28)" width="24" height="24" x="144"></rect>
+                <rect fill="rgb(189,0,38)" width="24" height="24" x="168"></rect>
+                <rect fill="rgb(128,0,38)" width="24" height="24" x="192"></rect>
+            </svg>
+            <span> 500k </span>
+            <p style="margin: 16px 10px"> Property Value </p>
+        </div>
+        <div class="row">
+            <p style="margin-top: 2px">Elevation = Household Income</p>
+        </div>
+    </div>
+</body>
+</html>
