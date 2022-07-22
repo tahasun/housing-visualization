@@ -13,4 +13,4 @@ npm install
 npm start
 ```
 
-California housing data from 1990 Census data (link: https:/www.kaggle.com/datasets/harrywang/housing)
+California housing data from 1990 Census data (link: https://www.kaggle.com/datasets/harrywang/housing)
